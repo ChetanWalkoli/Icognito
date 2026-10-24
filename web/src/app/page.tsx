@@ -1,8 +1,14 @@
 'use client'
+import { useEffect } from "react";
 import { Sparkle, Video } from "lucide-react";
+import { io } from "socket.io-client";
 import Navbar from "./components/Navbar";
 import {motion} from "motion/react";
 import Footer from "./components/Footer";
+
+const socket = io(process.env.NEXT_PUBLICSOCKET_URL!,{
+  transports: ['websocket'],
+})
 
 export default function Home() {
   return (
@@ -33,3 +39,5 @@ export default function Home() {
     </>
   );
 }
+
+

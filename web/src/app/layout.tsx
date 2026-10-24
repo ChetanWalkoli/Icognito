@@ -3,11 +3,15 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "Incogito | Random video or voice chat with Random people",
+  title: "Incogito | Anonymous video chat",
   description: "Incogito is a platform for anonymous video or voice chat with random people.",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+  }: Readonly<{
+    children: React.ReactNode;
+  } >) {
   return (
     <html lang="en">
       <body>
